@@ -1,0 +1,12 @@
+C:\Users\Dell Latitude 7400\Documents\repos\Magic.SystemAddonsNET\bin\Release\net6.0-windows\Magic.SystemAddonsNET.deps.json
+C:\Users\Dell Latitude 7400\Documents\repos\Magic.SystemAddonsNET\bin\Release\net6.0-windows\Magic.SystemAddonsNET.dll
+C:\Users\Dell Latitude 7400\Documents\repos\Magic.SystemAddonsNET\bin\Release\net6.0-windows\Magic.SystemAddonsNET.pdb
+C:\Users\Dell Latitude 7400\Documents\repos\Magic.SystemAddonsNET\obj\Release\net6.0-windows\Magic.SystemAddonsNET.csproj.AssemblyReference.cache
+C:\Users\Dell Latitude 7400\Documents\repos\Magic.SystemAddonsNET\obj\Release\net6.0-windows\Magic.SystemAddonsNET.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Dell Latitude 7400\Documents\repos\Magic.SystemAddonsNET\obj\Release\net6.0-windows\Magic.SystemAddonsNET.AssemblyInfoInputs.cache
+C:\Users\Dell Latitude 7400\Documents\repos\Magic.SystemAddonsNET\obj\Release\net6.0-windows\Magic.SystemAddonsNET.AssemblyInfo.cs
+C:\Users\Dell Latitude 7400\Documents\repos\Magic.SystemAddonsNET\obj\Release\net6.0-windows\Magic.SystemAddonsNET.csproj.CoreCompileInputs.cache
+C:\Users\Dell Latitude 7400\Documents\repos\Magic.SystemAddonsNET\obj\Release\net6.0-windows\Magic.SystemAddonsNET.dll
+C:\Users\Dell Latitude 7400\Documents\repos\Magic.SystemAddonsNET\obj\Release\net6.0-windows\refint\Magic.SystemAddonsNET.dll
+C:\Users\Dell Latitude 7400\Documents\repos\Magic.SystemAddonsNET\obj\Release\net6.0-windows\Magic.SystemAddonsNET.pdb
+C:\Users\Dell Latitude 7400\Documents\repos\Magic.SystemAddonsNET\obj\Release\net6.0-windows\ref\Magic.SystemAddonsNET.dll
