@@ -1,4 +1,7 @@
-﻿namespace Magic.SystemAddonsNET
+﻿using System.Text;
+using System.Text.Json;
+
+namespace Magic.SystemAddonsNET
 {
     public class HTTP : IDisposable
     {
@@ -85,6 +88,20 @@
 
             return response;
         } // end of function
+
+        public static async Task<string> PostJsonAsync<T>(string url, T payload)
+        {
+
+            string json = JsonSerializer.Serialize(payload);
+            using var content = new StringContent(json, Encoding.UTF8, "application/json");
+            using var httpClient = new HttpClient();
+
+            HttpResponseMessage response = await httpClient.PostAsync(url, content);
+            response.EnsureSuccessStatusCode();  // Throw exception kalau HTTP error
+
+            return await response.Content.ReadAsStringAsync();
+
+        } // en of method
 
         private readonly HttpClient _httpClient;
 
