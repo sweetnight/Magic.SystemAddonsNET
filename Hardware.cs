@@ -8,48 +8,62 @@ namespace Magic.SystemAddonsNET
 
         public static string? GetProcessorID()
         {
-            if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
+            try
             {
-                ManagementClass managClass = new ManagementClass("win32_processor");
-                ManagementObjectCollection managCollec = managClass.GetInstances();
-
-                string? ProcessorID = null;
-
-                foreach (ManagementObject managObj in managCollec)
+                if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
                 {
-                    ProcessorID = managObj.Properties["processorID"].Value?.ToString();
-                    break;
-                }
+                    ManagementClass managClass = new ManagementClass("win32_processor");
+                    ManagementObjectCollection managCollec = managClass.GetInstances();
 
-                return ProcessorID;
+                    string? ProcessorID = null;
+
+                    foreach (ManagementObject managObj in managCollec)
+                    {
+                        ProcessorID = managObj.Properties["processorID"].Value?.ToString();
+                        break;
+                    }
+
+                    return ProcessorID;
+                }
+                else
+                {
+                    // Handle the non-Windows case or return null or a default value
+                    return null;
+                }
             }
-            else
+            catch
             {
-                // Handle the non-Windows case or return null or a default value
                 return null;
             }
         } // end of method
 
         public static string? GetMotherboardSerialNumber()
         {
-            if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
+            try
             {
-                ManagementClass managClass = new ManagementClass("Win32_BaseBoard");
-                ManagementObjectCollection managCollec = managClass.GetInstances();
-
-                string? MotherboardSerialNumber = null;
-
-                foreach (ManagementObject managObj in managCollec)
+                if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
                 {
-                    MotherboardSerialNumber = managObj.Properties["SerialNumber"].Value?.ToString();
-                    break;
-                }
+                    ManagementClass managClass = new ManagementClass("Win32_BaseBoard");
+                    ManagementObjectCollection managCollec = managClass.GetInstances();
 
-                return MotherboardSerialNumber;
+                    string? MotherboardSerialNumber = null;
+
+                    foreach (ManagementObject managObj in managCollec)
+                    {
+                        MotherboardSerialNumber = managObj.Properties["SerialNumber"].Value?.ToString();
+                        break;
+                    }
+
+                    return MotherboardSerialNumber;
+                }
+                else
+                {
+                    // Handle the non-Windows case or return null
+                    return null;
+                }
             }
-            else
+            catch
             {
-                // Handle the non-Windows case or return null
                 return null;
             }
         } // end of method
