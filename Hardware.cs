@@ -68,6 +68,17 @@ namespace Magic.SystemAddonsNET
             }
         } // end of method
 
+        public static string? GetAllHWID()
+        {
+
+            string? processorId = Hardware.GetProcessorID();
+            string? motherboardSerialNumber = Hardware.GetMotherboardSerialNumber();
+            string? HWID = processorId == null || motherboardSerialNumber == null ? null : $"{processorId}|{motherboardSerialNumber}";
+
+            return HWID;
+
+        } // end of method
+
         public static long GetAvailableDiskSpace(string driveName)
         {
 
